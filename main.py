@@ -6,7 +6,7 @@ API_SITE = "https://api.openweathermap.org/data/2.5/onecall"
 API_KEY = os.environ.get("API_KEY")
 
 account_sid = "ACcd587c473e96c7d2e9fe4c0e11648ae7"
-auth_token = "8e9ebf5ace7e76392ba7638e74a32a6c"
+auth_token = "" #YOUR AUTH_TOKEN
 
 MY_PARAMETERS = {"lat": 23.647970, "lon": 88.128418, "appid": API_KEY, "exclude": "current,minutely,daily"}
 
@@ -25,7 +25,7 @@ if will_rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to be rain today! Bring an Umbrella ☂️ ",
-        from_='+16614413360',
-        to='+917001459154'
+        from_='',#PUT YOUR NUMBER
+        to=''# PUT YOUR ANOTHER NUMBER
     )
     print(message.status)
